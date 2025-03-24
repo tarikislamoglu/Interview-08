@@ -47,12 +47,7 @@ const ValidatedForm = () => {
   console.log(accounts);
   return (
     <form
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        border: "solid",
-        padding: 10,
-      }}
+      className="flex flex-col border-black border-2 p-[10px]"
       onSubmit={onSubmit}
     >
       <h3>Login</h3>
@@ -66,8 +61,8 @@ const ValidatedForm = () => {
               : setUsername(e.target.value);
           }
         }
-        style={{ marginBottom: 5 }}
         maxLength={20}
+        className="border-2 mb-5"
       />
       <input
         value={password}
@@ -79,8 +74,8 @@ const ValidatedForm = () => {
               : setPassword(e.target.value);
           }
         }
-        style={{ marginBottom: 10 }}
         maxLength={20}
+        className="border-2 mb-5"
       />
       <button style={{ alignSelf: "center" }} onClick={onSubmit}>
         Submit
